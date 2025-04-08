@@ -5,7 +5,7 @@
 | Name             | Student ID | GitHub / Identifier   |
 |------------------|------------|------------------------|
 | Ali Sao          | 84855617   | Sao-Ali                |
-| Hankang Li       | 91079520   | Hankang Li             |
+| Hankang Li       | 91079520   | authentisity           |
 | Kevin Chhim      | 61527648   | Kevinlycc              |
 | Joonhyuk Kim     | 47282640   | Nyxkim5                |
 | German Cervantes | 16067241   | Cervmg                 |
