@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 #include "board.h"
 char board[8][8][6];  
 char whitePieces[9] = {'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R', 'P'};
@@ -42,9 +43,22 @@ void print_board() {
         printf("\n");
     }
 }
+char board_get(int row, int col) {
+    row--;
+    col--;
+    
+    //Grab letter
+    char piece = board[row][col][2];
+
+    //Return '.' if empty square
+    return isalpha(piece) ? piece : '.';
+}
+
 
 int main(void) {
     board_init();
     print_board();
+
+    printf("%c\n", board_get(1,1));
     return 0;
 }
