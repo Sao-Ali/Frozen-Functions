@@ -10,4 +10,7 @@ void print_board(void);
 //Get piece at board location
 char board_get(int row, int col);
 
+//Set specific square to piece
+void board_set(int row, int col, char piece);
+
 #endif

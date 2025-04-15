@@ -42,6 +42,7 @@ void print_board() {
         }
         printf("\n");
     }
+    printf("\n");
 }
 char board_get(int row, int col) {
     row--;
@@ -50,15 +51,32 @@ char board_get(int row, int col) {
     //Grab letter
     char piece = board[row][col][2];
 
-    //Return '.' if empty square
+    //Return '.' if we find empty square
     return isalpha(piece) ? piece : '.';
 }
+void board_set(int row, int col, char piece) {
+    row --;
+    col --;
 
+    
+    //Remove piece from current position
+    for (int i = 0; i <=7; i++){
+        for (int j = 0; j <= 7; j++){
+            if (board_get(i+1,j+1) == piece){
+                strcpy(board[i][j], "|   |");
+            }
+        }
+    }
+
+    //Put piece and NEW location
+    sprintf(board[row][col], "| %c |", piece); 
+
+}
 
 int main(void) {
     board_init();
     print_board();
 
-    printf("%c\n", board_get(1,1));
+
     return 0;
 }
