@@ -3,7 +3,6 @@
 #include <string.h>
 #include <ctype.h>
 #include "board.h"
-char board[8][8][6];  
 char whitePieces[9] = {'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R', 'P'};
 char blackPieces[9] = {'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r', 'p'};
 void board_init() {
