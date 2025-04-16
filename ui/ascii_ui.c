@@ -31,7 +31,6 @@ void ui_draw_board() {
         }
         printf("%d\n", rank); 
     }
-     printf("  a b c d e f g h\n"); 
      printf("\n"); 
 }
 
