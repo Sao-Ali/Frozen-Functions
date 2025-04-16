@@ -1,13 +1,13 @@
 #ifndef BOARD_H
 #define BOARD_H
 
-#define BOARD_SIZE 8
+#define BOARD_SIZE 10
 #define SQUARE_SIZE 6
 extern char board[BOARD_SIZE][BOARD_SIZE][SQUARE_SIZE];
 
 //Initialize Board
 void board_init(void);
-//Print Board
+
 void print_board(void);
 
 //Get piece at board location

@@ -5,50 +5,54 @@
 #include "board.h"
 char whitePieces[9] = {'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R', 'P'};
 char blackPieces[9] = {'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r', 'p'};
+char letters[8] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'};
+char board[BOARD_SIZE][BOARD_SIZE][SQUARE_SIZE];  
 void board_init() {
     // Pieces: R, N, B, Q, K, B, N, R
     for (int i = 0; i < 8; i++) {
         for (int j = 0; j < 8; j++) {
             if (i == 0){
-                // First rank: white major pieces
-                sprintf(board[i][j], "| %c |", whitePieces[j]);
+                //TODO first row letters
+                sprintf(board[i][j], " %c ", letters[j]);
             }
             else if (i == 1){
+                // First rank: white major pieces
+                sprintf(board[i][j], " %c ", whitePieces[j]);
+            }
+            else if (i == 2){
                 // Second rank: pawns
-                sprintf(board[i][j], "| %c |", whitePieces[8]);
+                sprintf(board[i][j], " %c ", whitePieces[8]);
             }
-            else if (i == 6){
+            else if (i == 7){
                 // 7th rank: black pawns
-                sprintf(board[i][j], "| %c |", blackPieces[8]);
+                sprintf(board[i][j], " %c ", blackPieces[8]);
             }
-            else if (i ==7){
+            else if (i ==8){
                 //8th rank: black major pieces
-                sprintf(board[i][j], "| %c |", blackPieces[j]);
+                sprintf(board[i][j], " %c ", blackPieces[j]);
+            }
+            else if (i == 9){
+                //TODO: BOTTOM ROW LETTERS
+                sprintf(board[i][j], " %c ", letters[j]);
             }
             else{
                 //Empty squares 
-                strcpy(board[i][j], "|   |");
+                strcpy(board[i][j], " . ");
             }
             
         }
     }
 }
 
-void print_board() {
-    for (int i = 0; i < 8; i++) {
-        for (int j = 0; j < 8; j++) {
-            printf("%s", board[i][j]);  
-        }
-        printf("\n");
-    }
-    printf("\n");
-}
+
+
+
 char board_get(int row, int col) {
     row--;
     col--;
     
     //Grab letter
-    char piece = board[row][col][2];
+    char piece = board[row][col][1];
 
     //Return '.' if we find empty square
     return isalpha(piece) ? piece : '.';
@@ -70,12 +74,4 @@ void board_set(int row, int col, char piece) {
     //Put piece and NEW location
     sprintf(board[row][col], "| %c |", piece); 
 
-}
-
-int main(void) {
-    board_init();
-    print_board();
-
-
-    return 0;
 }
