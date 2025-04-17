@@ -8,8 +8,6 @@ extern char board[BOARD_SIZE][BOARD_SIZE][SQUARE_SIZE];
 //Initialize Board
 void board_init(void);
 
-void print_board(void);
-
 //Get piece at board location
 char board_get(int row, int col);
 

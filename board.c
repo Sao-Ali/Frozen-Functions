@@ -4,8 +4,8 @@
 #include <ctype.h>
 #include "board.h"
 
-char whitePieces[9] = {'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R', 'P'}; // Uppercase White
-char blackPieces[9] = {'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r', 'p'}; // Lowercase Black
+char whitePieces[9] = {'R', 'N', 'B', 'Q', 'K', 'B', 'N', 'R', 'P'}; 
+char blackPieces[9] = {'r', 'n', 'b', 'q', 'k', 'b', 'n', 'r', 'p'};
 char letters[9] = {'\0','a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'}; 
 char board[BOARD_SIZE][BOARD_SIZE][SQUARE_SIZE];
 
