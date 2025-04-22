@@ -1,0 +1,5 @@
+.vscode
+.cache
+*.o
+*.exe
+./ui/*.o
