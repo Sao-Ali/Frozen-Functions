@@ -3,12 +3,11 @@
 
 void ui_init();
 
-//Print Board
+// Print Board
 void ui_draw_board();
 
-void ui_show_message(const char* msg);
+void ui_show_message(const char *msg);
 
 void ui_cleanup();
 
 #endif
-

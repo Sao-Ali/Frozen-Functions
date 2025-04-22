@@ -4,17 +4,21 @@
 #include <ctype.h>
 #include "player.h"
 
-//Current player, game starts on white
+// Current player, game starts on white
 char currentPlayer = 'W';
 
-char player_get_current(){
+char player_get_current()
+{
     return currentPlayer;
 }
-void player_switch(){
-    if (currentPlayer == 'W'){
+void player_switch()
+{
+    if (currentPlayer == 'W')
+    {
         currentPlayer = 'B';
     }
-    else{
+    else
+    {
         currentPlayer = 'W';
     }
 }

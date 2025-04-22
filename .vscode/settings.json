@@ -1,5 +1,10 @@
 {
     "files.associations": {
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "string.h": "c",
+        "stdio.h": "c",
+        "ctype.h": "c",
+        "ui.h": "c",
+        "player.h": "c"
     }
 }
