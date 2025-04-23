@@ -21,6 +21,7 @@ static int rank_to_row(char rank)
     return (int)rank;
 }
 
+
 bool io_get_move(Move *move)
 {
 }
