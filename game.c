@@ -11,3 +11,4 @@ char player_get_current()
     return 'B';
   }
 }
+//Commited by Aly Doumbia(88837070) and 
